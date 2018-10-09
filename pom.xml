@@ -1,15 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.vm.rest.poc</groupId>
-  <artifactId>Spring4MVCCRUDRestService</artifactId>
-  <packaging>war</packaging>
-  <version>1.0.0</version>
-  <name>Spring Rest Demo</name>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.vm.rest.poc</groupId>
+	<artifactId>spring-rest-poc</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0</version>
+	<name>Spring Rest Demo</name>
 
-  	<properties>
+	<properties>
 		<springframework.version>4.2.0.RELEASE</springframework.version>
 		<jackson.version>2.5.3</jackson.version>
+		<java.version>1.7</java.version>
 	</properties>
 
 	<dependencies>
@@ -26,15 +27,15 @@
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>${jackson.version}</version>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-			
+
 	</dependencies>
 
 
@@ -49,6 +50,11 @@
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
 						<warName>spring-rest-poc</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<encoding>UTF-8</encoding>
+						<forceJavacCompilerUse>true</forceJavacCompilerUse>
+
 					</configuration>
 				</plugin>
 			</plugins>
