@@ -5,7 +5,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class AppRestTestClient {
 	
-	public static final String REST_SERVICE_URI = "http://localhost:8080/spring-rest-poc";
+	public static final String REST_SERVICE_URI = "http://localhost:8080/Springrest/";
 
 	public static void main(String[] args) {
 		
